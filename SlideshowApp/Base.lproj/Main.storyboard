@@ -99,6 +99,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="yK3-vZ-ytF"/>
+                    <connections>
+                        <outlet property="enlargedImageView" destination="gUh-Fo-j6k" id="sOz-bu-LZR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="78d-4z-UIq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
