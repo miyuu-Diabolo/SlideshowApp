@@ -65,6 +65,8 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="4Te-E0-frl" id="PoY-qx-e7k"/>
+                        <outlet property="nextImages" destination="cWq-gb-JEH" id="j9t-cQ-Fef"/>
+                        <outlet property="prev" destination="lFL-vv-EGB" id="0hu-7B-1de"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

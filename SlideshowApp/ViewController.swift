@@ -52,6 +52,8 @@ class ViewController: UIViewController {
         }
     }
     //進めるボタンを押された時の処理
+    
+    @IBOutlet weak var nextImages: UIButton!
     @IBAction func nextButton(_ sender: Any) {
         if buttonsEnabled {
             imageIndex += 1
@@ -62,6 +64,8 @@ class ViewController: UIViewController {
         updateImageView()
     }
     //戻るボタンを押された時の処理
+    
+    @IBOutlet weak var prev: UIButton!
     @IBAction func prevButton(_ sender: Any) {
         if buttonsEnabled {
             imageIndex -= 1
@@ -74,12 +78,15 @@ class ViewController: UIViewController {
     //再生、停止ボタンを押された時の処理
     @IBAction func autoPlay(_ sender: Any) {
         if timer == nil {
-            buttonsEnabled = false
+            
             timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(autoPlayTimer), userInfo: nil, repeats: true)
+            prev.isEnabled = false
+            nextImages.isEnabled = false
         } else {
             timer?.invalidate()
             timer = nil
-            buttonsEnabled = true
+            prev.isEnabled = true
+            nextImages.isEnabled = true
         }
     }
     
