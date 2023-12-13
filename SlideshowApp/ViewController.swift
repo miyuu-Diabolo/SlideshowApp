@@ -8,7 +8,8 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
+    @IBAction func unwind(_ segue: UIStoryboardSegue) {
+        }
     @IBOutlet weak var imageView: UIImageView!
     //イメージの詳細
     var imageIndex = 0
