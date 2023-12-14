@@ -40,9 +40,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tXs-Rl-uWe">
-                                <rect key="frame" x="276" y="733" width="98.333333333333314" height="35"/>
+                                <rect key="frame" x="276" y="733" width="58.666666666666686" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="再生/停止"/>
+                                <buttonConfiguration key="configuration" style="plain" title="再生"/>
                                 <connections>
                                     <action selector="autoPlay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Al-6b-NxY"/>
                                 </connections>
@@ -70,6 +70,7 @@
                         <outlet property="imageView" destination="4Te-E0-frl" id="PoY-qx-e7k"/>
                         <outlet property="nextImages" destination="cWq-gb-JEH" id="j9t-cQ-Fef"/>
                         <outlet property="prev" destination="lFL-vv-EGB" id="0hu-7B-1de"/>
+                        <outlet property="stopAndGo" destination="tXs-Rl-uWe" id="fhs-XB-PLT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -91,10 +92,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gUh-Fo-j6k">
-                                <rect key="frame" x="0.0" y="59" width="393" height="629"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="629.66666666666663"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MhZ-M8-QgR">
-                                <rect key="frame" x="167" y="718" width="59" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MhZ-M8-QgR">
+                                <rect key="frame" x="167" y="718.66666666666663" width="59" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="戻る"/>
                                 <connections>
@@ -105,15 +106,13 @@
                         <viewLayoutGuide key="safeArea" id="0VJ-DB-8uj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="0VJ-DB-8uj" firstAttribute="trailing" secondItem="gUh-Fo-j6k" secondAttribute="trailing" id="4fU-M6-TmJ"/>
-                            <constraint firstItem="MhZ-M8-QgR" firstAttribute="top" secondItem="gUh-Fo-j6k" secondAttribute="bottom" constant="30" id="79r-ql-ivI"/>
-                            <constraint firstItem="gUh-Fo-j6k" firstAttribute="leading" secondItem="0VJ-DB-8uj" secondAttribute="leading" id="Ay8-a3-Iax"/>
-                            <constraint firstItem="gUh-Fo-j6k" firstAttribute="centerX" secondItem="p7E-uN-bXr" secondAttribute="centerX" id="Ngn-M4-Ypb"/>
-                            <constraint firstItem="gUh-Fo-j6k" firstAttribute="leading" secondItem="0VJ-DB-8uj" secondAttribute="leading" id="O4M-jR-N29"/>
-                            <constraint firstItem="gUh-Fo-j6k" firstAttribute="trailing" secondItem="0VJ-DB-8uj" secondAttribute="trailing" id="a6y-Mj-9VT"/>
-                            <constraint firstItem="0VJ-DB-8uj" firstAttribute="bottom" secondItem="MhZ-M8-QgR" secondAttribute="bottom" constant="30" id="g9X-sB-PgR"/>
-                            <constraint firstItem="gUh-Fo-j6k" firstAttribute="top" secondItem="0VJ-DB-8uj" secondAttribute="top" id="j2f-0E-T05"/>
-                            <constraint firstItem="gUh-Fo-j6k" firstAttribute="top" secondItem="0VJ-DB-8uj" secondAttribute="top" id="un8-7H-zng"/>
+                            <constraint firstItem="gUh-Fo-j6k" firstAttribute="leading" secondItem="0VJ-DB-8uj" secondAttribute="leading" id="1VE-Me-fJu"/>
+                            <constraint firstItem="0VJ-DB-8uj" firstAttribute="bottom" secondItem="MhZ-M8-QgR" secondAttribute="bottom" constant="30" id="Bdz-5Z-6kd"/>
+                            <constraint firstItem="gUh-Fo-j6k" firstAttribute="trailing" secondItem="0VJ-DB-8uj" secondAttribute="trailing" id="CBa-aO-rz3"/>
+                            <constraint firstItem="gUh-Fo-j6k" firstAttribute="top" secondItem="0VJ-DB-8uj" secondAttribute="top" id="GPu-xR-sUQ"/>
+                            <constraint firstItem="MhZ-M8-QgR" firstAttribute="top" secondItem="gUh-Fo-j6k" secondAttribute="bottom" constant="30" id="Ya2-tm-nUM"/>
+                            <constraint firstItem="MhZ-M8-QgR" firstAttribute="top" secondItem="gUh-Fo-j6k" secondAttribute="bottom" constant="30" id="lmE-aA-dwd"/>
+                            <constraint firstItem="MhZ-M8-QgR" firstAttribute="centerX" secondItem="p7E-uN-bXr" secondAttribute="centerX" id="opI-mk-4P0"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="yK3-vZ-ytF"/>

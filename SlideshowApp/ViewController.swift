@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     //イメージの詳細
     var imageIndex = 0
-    let images = ["images1", "images2", "images3", "images4", "images5"]
+    let images = ["images1.jpeg", "images2.jpeg", "images3.jpeg", "images4.jpeg", "images5.jpeg"]
     //タイマーについて
     var timer: Timer?
     //ボタンが押されたらという処理を定義して初期化
@@ -77,17 +77,21 @@ class ViewController: UIViewController {
         updateImageView()
     }
     //再生、停止ボタンを押された時の処理
+    
+    @IBOutlet weak var stopAndGo: UIButton!
     @IBAction func autoPlay(_ sender: Any) {
         if timer == nil {
             
             timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(autoPlayTimer), userInfo: nil, repeats: true)
             prev.isEnabled = false
             nextImages.isEnabled = false
+            stopAndGo.setTitle("停止", for: .normal)
         } else {
             timer?.invalidate()
             timer = nil
             prev.isEnabled = true
             nextImages.isEnabled = true
+            stopAndGo.setTitle("再生", for: .normal)
         }
     }
     
