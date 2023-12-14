@@ -49,7 +49,13 @@ class ViewController: UIViewController {
         if segue.identifier == "enlarged" {
             if let destinationVC = segue.destination as? ResultViewController {
                 destinationVC.selectedImage = sender as? UIImage
+                timer?.invalidate()
+                timer = nil
+                prev.isEnabled = true
+                nextImages.isEnabled = true
+                stopAndGo.setTitle("再生", for: .normal)
             }
+           
         }
     }
     //進めるボタンを押された時の処理
